@@ -2,6 +2,7 @@
 .text 
 .global pre_asmprint
 pre_asmprint:
+  push r0
   push r17 
   push r18
   push r19
@@ -33,11 +34,12 @@ pre_asmprint:
   pop r19
   pop r18
   pop r17
-
+  pop r0
   ret
 
 .global pre_asmprintRV
 pre_asmprintRV:
+  push r0
   push r17 
   push r18
   push r19
@@ -69,5 +71,6 @@ pre_asmprintRV:
   pop r19
   pop r18
   pop r17
+  pop r0
 
   ret
