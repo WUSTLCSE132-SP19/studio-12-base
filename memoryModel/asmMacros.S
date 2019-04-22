@@ -33,10 +33,12 @@ _p\@: .asciz "\m"
   push r16 
   push r22
   push r24
-  in r16,0x3f   // r16 = SREG
 
   mov  22,\r
   ldi  r24, \r
+  
+  in r16,0x3f   // r16 = SREG
+
   call pre_asmprintRV
 
   pop r24
